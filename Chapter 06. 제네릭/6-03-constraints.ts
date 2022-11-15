@@ -41,4 +41,26 @@
 
     ttasjwiAfterPay.workFullTime();
     bobAfterPay.workPartTime();
+
+    const obj1 = {
+        name: 'ttasjwi',
+        age:20
+    }
+
+    const obj2 = {
+        animal: '🐕',
+    }
+
+    /**
+     * keyof 연산자 : ~의 키
+     */
+
+    function getValue<T, K extends keyof T>(obj: T, key: K) : T[K] {
+        return obj[key];
+    }
+
+    console.log(getValue(obj1, 'name')); // ttasjwi
+    console.log(getValue(obj1, 'age')); // ttasjwi
+    console.log(getValue(obj2, 'animal')); // ttasjwi
 }
+
